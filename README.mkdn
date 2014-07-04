@@ -1,0 +1,38 @@
+## Network daemon that takes logs from Logwrangler clients and stores them in Elasticsearch
+
+### Goals
+
+- Expose a node library that can be built on top of
+- Allow it to run standalone
+
+### Library interface
+
+```
+var options = {
+	interfaces: {
+		http: {
+			bindHost: '0.0.0.0',
+			bindPort: 8080
+		},
+		ws: {
+			bindHost: '0.0.0.0',
+			bindPort: 8081
+		}
+		// etc...
+	},
+	
+};
+
+var daemon = new Logwranglerd(options);
+
+// provide and authentication route
+daemon.auth(function(payload, callback){
+
+	// check payload
+
+	callback(true || false);
+});
+
+daemon.start();
+
+```

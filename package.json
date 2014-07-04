@@ -1,0 +1,25 @@
+{
+  "name": "logwranglerd",
+  "version": "0.0.0",
+  "description": "Network daemon that takes logs from Logwrangler clients and stores them in Elasticsearch",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "logs",
+    "logging",
+    "logwrangler",
+    "daemon",
+    "elasticsearch"
+  ],
+  "author": "Sean McGary <sean@seanmcgary.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "body-parser": "~1.4.3"
+  }
+}
