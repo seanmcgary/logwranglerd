@@ -20,6 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "~2.4.1",
-    "body-parser": "~1.4.3"
+    "body-parser": "~1.4.3",
+    "elasticsearch": "~2.3.0"
   }
 }
