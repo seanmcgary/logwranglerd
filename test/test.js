@@ -4,8 +4,6 @@ var wsServer = require('../lib/websocketClientServer');
 console.log(wsServer);
 
 var ws = new wsServer();
-console.log(ws);
-ws.emit('log', 'test');
 
 var instances = interfaces.init({
 	elasticsearch: {
@@ -40,6 +38,12 @@ logger.use(new logwranglerHttp({
 	port: 8000
 }));
 
-logger.log({
-	message: 'test message'
-})
+setInterval(function(){
+	logger.log({
+		message: 'test message',
+		token: 'testtoken',
+		data: {
+			date: new Date().toISOString()
+		}
+	});	
+}, 5000);
